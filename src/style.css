@@ -1,0 +1,519 @@
+/**
+   * Fonts
+   */
+
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap");
+
+:root {
+  /**
+   * colors
+   */
+
+  /* gradient */
+
+  --bg-gradient-1: linear-gradient(to top, #020004, #290245);
+  --bg-gradient-2: linear-gradient(to top, #290245, #020004);
+  --bg-gradient-text: linear-gradient(
+    45deg,
+    rgb(94, 47, 114) 0%,
+    rgb(50, 9, 68) 50%
+  );
+
+  /* solid */
+
+  --purple-button: #690091;
+  --purple-button-hover: #8d00c3;
+  --bg-text: #5b326a;
+  --font: #ececec;
+  --jet: #343434;
+  --purple-footer: #410f54;
+
+  /**
+   * typography
+   */
+
+  /* font-family */
+  --ff-exo: "Exo", serif;
+  --ff-exo: "Poppins", sans-serif;
+
+  /* font-size */
+  --fs-1: 1.5rem;
+  --fs-2: 2rem;
+  --fs-3: 2.5rem;
+  --fs-4: 6rem;
+
+  /* font-weight */
+  --fw-bold: bold;
+  --fw-light: light;
+  --fw-500: 500;
+  --fw-600: 600;
+
+  /**
+   * transition
+   */
+
+  --transition-1: background 0.3s ease-in-out;
+  --transition-2: background 0.3s, transform 0.2s;
+
+  /**
+   * borders
+   */
+  --border-style: 2px solid var(--purple-button-hover);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--font);
+}
+
+h1,
+a {
+  font-family: "Exo", serif;
+}
+
+p,
+button,
+textarea,
+input {
+  font-family: "Manrope", serif;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  background: transparent;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Centrar el contenido del header */
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* LOGO */
+nav img {
+  height: 50px;
+}
+
+/* LISTA DEL NAVBAR */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+  justify-content: center; /* Centrar elementos */
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* LINKS DEL NAVBAR */
+nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 2px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--fs-1);
+  color: var(--font);
+  transition: var(--transition-2);
+  min-width: 140px;
+  border-radius: 32px;
+  white-space: nowrap;
+}
+
+nav ul li a:hover {
+  background-color: var(--purple-button);
+  transform: scale(1.05);
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  list-style: none;
+  display: none;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  display: block;
+  text-align: center;
+  color: var(--font);
+  font-size: var(--fs-1);
+  min-width: 210px;
+  transition: var(--transition-1);
+}
+
+.dropdown-menu li a:hover {
+  background: transparent !important;
+}
+
+/* EFECTO AL HACER SCROLL */
+header.scrolled {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  transition: var(--transition-1);
+}
+
+/* Sección principal */
+.inicio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  background: var(--bg-gradient-2);
+}
+
+.inicio-contenedor {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  gap: 20px;
+}
+
+.inicio-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.inicio-imagen img {
+  width: 70%;
+  max-width: 700px;
+  height: auto;
+}
+
+.inicio-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+.inicio-texto h1 {
+  width: 60%;
+  padding: 16px 0px;
+}
+
+.inicio-texto h1 {
+  font-size: var(--fs-4);
+}
+
+.boton {
+  display: inline-block;
+  padding: 8px 25px;
+  font-size: var(--fs-1);
+  font-weight: bold;
+  color: var(--font);
+  background: var(--purple-button);
+  border: var(--border-style);
+  text-decoration: none;
+  border-radius: 32px;
+}
+
+.boton:hover {
+  background: var(--purple-button-hover);
+}
+
+.inicio-descripcion {
+  padding: 20px 0px;
+  font-size: var(--fs-1);
+  width: 100%;
+}
+.inicio-descripcion h1 {
+  padding: 8px 0px;
+}
+
+/* Slider */
+.slider-seccion {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  background: var(--bg-gradient-1);
+}
+
+.slider-logo img {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.slider-contenedor {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  font-size: var(--fs-1);
+}
+
+.slide h1 {
+  padding: 8px 0px;
+}
+
+.slide p {
+  color: #d1d1d1;
+}
+
+/* Botones del slider */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 5px 8px;
+  border-radius: 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* SERVICIOS */
+/* Contenedor de la sección */
+.servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 150px;
+  position: relative;
+  background: var(--bg-gradient-2);
+}
+
+/* Contenedor de imágenes */
+.imagenes {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+/* Estilos base de las imágenes */
+.imagen {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Posición en forma de triángulo */
+#img1 {
+  top: 0;
+  left: 100px;
+}
+#img2 {
+  top: 150px;
+  left: 0;
+}
+#img3 {
+  top: 150px;
+  left: 200px;
+}
+
+/* Imagen activa: resalta al frente */
+.imagen.active {
+  transform: scale(1.3);
+  z-index: 2;
+}
+
+/* Caja de servicios */
+.caja-servicios {
+  background: var(--bg-gradient-text);
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  width: 300px;
+}
+
+.caja-servicios h1 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-bold);
+  margin-bottom: 32px;
+}
+
+/* Botones */
+.botones button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: var(--fs-1);
+  font-weight: var(--fw-light);
+  border: var(--border-style);
+  cursor: pointer;
+  background: var(--purple-button);
+  color: var(--font);
+  border-radius: 32px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.botones button:hover {
+  background: var(--purple-button-hover);
+  transform: scale(1.05);
+}
+
+/* CONTACTO */
+/* Sección de contacto */
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 150px;
+  background: var(--bg-gradient-1);
+}
+
+/* Caja del formulario */
+.caja-contacto {
+  background: var(--bg-gradient-text);
+  padding: 24px;
+  border-radius: 16px;
+  width: 350px;
+  text-align: center;
+}
+
+/* Título */
+.caja-contacto h1 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-bold);
+  margin-bottom: 24px;
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Campos de entrada */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: var(--fs-1);
+  border-radius: 10px;
+  background: var(--font);
+  color: var(--jet);
+}
+
+textarea {
+  height: 120px;
+}
+
+/* Placeholder en los inputs */
+input::placeholder,
+textarea::placeholder {
+  color: var(--jet);
+}
+
+/* Botón enviar */
+.caja-contacto button {
+  width: 40%;
+  padding: 8px;
+  font-size: var(--fs-1);
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--purple-button);
+  color: var(--font);
+  margin-top: 9px;
+  border-radius: 32px;
+  border: var(--border-style);
+  transition: var(--transition-2);
+}
+
+.caja-contacto button:hover {
+  background: var(--purple-button-hover);
+  transform: scale(1.05);
+}
+
+/* Imagen del gato */
+.contacto-imagen img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--purple-footer);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+footer img {
+  width: 8%;
+}

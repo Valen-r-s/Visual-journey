@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/diseño3D.css" />
+    <link rel="icon" type="image/png" href="./static/img/logo-1.png" />
+    <title>Visual Journey</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          src="./static/img/logo-1.png"
+          alt="Picture of a Ha Long Bay sunset"
+        />
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li class="dropdown">
+            <a href="#servicios">Servicios ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Diseño 3D</a></li>
+              <li>
+                <a href="diseñoInteractivo.html">Diseño web interactivo</a>
+              </li>
+              <li>
+                <a href="diseñoTradicional.html">Diseño web tradicional</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="diseno-web">
+        <!-- Contenedor de la imagen -->
+        <div class="imagen">
+          <img
+            src="./static/img/modelado.png"
+            class="imagen-web modelados"
+            alt="Imagen de modelados"
+          />
+        </div>
+
+        <!-- Contenedor del texto -->
+        <div class="contenido-web">
+          <h1>Modelado orgánico.</h1>
+          <p>
+            Creación de modelos realistas y estilizados para visualización,
+            animación y experiencias interactivas.
+          </p>
+        </div>
+      </section>
+
+      <section class="diseno-web-video">
+        <!-- Contenedor del texto -->
+        <div class="contenido-web">
+          <h1>Rigging.</h1>
+          <p>
+            Estructuras esqueléticas precisas que dan vida y control total a tus
+            modelos 3D..
+          </p>
+        </div>
+
+        <!-- Contenedor del video -->
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="video-web">
+            <source src="./static/video/animacion.mp4" type="video/mp4" />
+            Tu navegador no soporta videos.
+          </video>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios" class="servicios">
+        <!-- Contenedor de imágenes -->
+        <div class="imagenes">
+          <img
+            src="./static/img/caja1.png"
+            class="imagen active"
+            id="img1"
+            alt="Diseño 3D"
+          />
+          <img
+            src="./static/img/caja2.png"
+            class="imagen"
+            id="img2"
+            alt="Desarrollo Web Interactivo"
+          />
+          <img
+            src="./static/img/caja3.png"
+            class="imagen"
+            id="img3"
+            alt="Desarrollo Web Tradicional"
+          />
+        </div>
+
+        <!-- Contenedor de la caja con los botones -->
+        <div class="caja-servicios">
+          <h1>Servicios</h1>
+          <div class="botones">
+            <button onclick="mostrarImagen('img1')">Diseño 3D</button>
+            <button onclick="mostrarImagen('img2')">
+              Desarrollo Web Interactivo
+            </button>
+            <button onclick="mostrarImagen('img3')">
+              Desarrollo Web Tradicional
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <!-- Sección de Contacto -->
+      <section id="contact" class="contacto">
+        <!-- Caja del formulario -->
+        <div class="caja-contacto">
+          <h1>Contáctanos</h1>
+          <form>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="Tu correo"
+              required
+            />
+
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Cuéntanos tú idea..."
+              required
+            ></textarea>
+
+            <button class="enviar" type="submit">Enviar</button>
+          </form>
+        </div>
+
+        <!-- Imagen a la derecha -->
+        <div class="contacto-imagen">
+          <img src="./static/img/cat.png" alt="Gato contactando" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="./static/img/logo-1.png" alt="Logo en grande" />
+      <p>&copy; 2025 Visual Journey</p>
+    </footer>
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>

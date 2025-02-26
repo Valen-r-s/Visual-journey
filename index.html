@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="icon" type="image/png" href="./static/img/logo-1.png" />
+    <title>Visual Journey</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          src="./static/img/logo-1.png"
+          alt="Picture of a Ha Long Bay sunset"
+        />
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li class="dropdown">
+            <a href="#servicios">Servicios ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Diseño 3D</a></li>
+              <li>
+                <a href="diseñoInteractivo.html">Diseño web interactivo</a>
+              </li>
+              <li>
+                <a href="diseñoTradicional.html">Diseño web tradicional</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Sección Principal -->
+      <section id="inicio" class="inicio">
+        <div class="inicio-contenedor">
+          <div class="inicio-imagen">
+            <img src="./static/img/logo-1.png" alt="Imagen destacada" />
+          </div>
+
+          <div class="inicio-texto">
+            <h1>Visual Journey</h1>
+            <a href="#contact" class="boton">Cuéntanos tu idea</a>
+          </div>
+        </div>
+
+        <div class="inicio-descripcion">
+          <h1>El futuro del desarrollo web es tridimensional.</h1>
+          <p>
+            Creamos experiencias web envolventes con tecnología 3D y desarrollo
+            interactivo.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección del Slider -->
+      <section id="about" class="slider-seccion">
+        <div class="slider-logo">
+          <img src="./static/img/logo-1.png" alt="Logo en grande" />
+        </div>
+
+        <div class="slider-contenedor">
+          <div class="slider">
+            <div class="slide">
+              <h1>¿Qué hacemos?</h1>
+              <p>
+                Creamos experiencias inmersivas con Three.js y herramientas 3D,
+                optimizadas para cualquier dispositivo, ideales para
+                visualizaciones y entornos virtuales.
+              </p>
+            </div>
+
+            <div class="slide">
+              <h1>¿Quiénes somos?</h1>
+              <p>
+                Creamos experiencias inmersivas con Three.js y herramientas 3D,
+                optimizadas para cualquier dispositivo, ideales para
+                visualizaciones y entornos virtuales.
+              </p>
+            </div>
+          </div>
+
+          <!-- Controles del slider -->
+          <button class="prev">◀</button>
+          <button class="next">▶</button>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios" class="servicios">
+        <!-- Contenedor de imágenes -->
+        <div class="imagenes">
+          <img
+            src="./static/img/caja1.png"
+            class="imagen active"
+            id="img1"
+            alt="Diseño 3D"
+          />
+          <img
+            src="./static/img/caja2.png"
+            class="imagen"
+            id="img2"
+            alt="Desarrollo Web Interactivo"
+          />
+          <img
+            src="./static/img/caja3.png"
+            class="imagen"
+            id="img3"
+            alt="Desarrollo Web Tradicional"
+          />
+        </div>
+
+        <!-- Contenedor de la caja con los botones -->
+        <div class="caja-servicios">
+          <h1>Servicios</h1>
+          <div class="botones">
+            <button onclick="mostrarImagen('img1')">Diseño 3D</button>
+            <button onclick="mostrarImagen('img2')">
+              Desarrollo Web Interactivo
+            </button>
+            <button onclick="mostrarImagen('img3')">
+              Desarrollo Web Tradicional
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <!-- Sección de Contacto -->
+      <section id="contact" class="contacto">
+        <!-- Caja del formulario -->
+        <div class="caja-contacto">
+          <h1>Contáctanos</h1>
+          <form>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="Tu correo"
+              required
+            />
+
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Cuéntanos tú idea..."
+              required
+            ></textarea>
+
+            <button class="enviar" type="submit">Enviar</button>
+          </form>
+        </div>
+
+        <!-- Imagen a la derecha -->
+        <div class="contacto-imagen">
+          <img src="./static/img/cat.png" alt="Gato contactando" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="./static/img/logo-1.png" alt="Logo en grande" />
+      <p>&copy; 2025 Visual Journey</p>
+    </footer>
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>

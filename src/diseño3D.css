@@ -1,0 +1,128 @@
+/* Sección completa */
+.diseno-web {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 150px;
+  background: var(--bg-gradient-2);
+}
+
+.imagenes-web {
+  position: relative;
+  width: 320px;
+  height: 250px;
+}
+
+.imagen-web {
+  width: 100%;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fondo {
+  top: 0px;
+  right: 40px;
+}
+
+.arriba {
+  bottom: 50px;
+  left: 120px;
+}
+
+/**
+     * Tradicional
+     */
+.top {
+  bottom: 80px;
+  right: 60px;
+}
+
+.back {
+  top: 0px;
+  left: 80px;
+}
+
+/* END */
+
+/**
+     * 3D
+     */
+.imagen {
+  position: relative;
+  width: 320px;
+  height: 250px;
+}
+
+.modelados {
+  top: -90px;
+  right: 0px;
+}
+
+/* END */
+
+/**
+     * Rigging
+     */
+.diseno-web-video {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Alinea verticalmente */
+  height: 100vh;
+  gap: 50px; /* Espacio entre el texto y el video */
+  background: var(--bg-gradient-1);
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.video-web {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+/* END */
+
+.contenido-web {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 500px;
+}
+
+.contenido-web h1 {
+  font-size: var(--fs-4);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contenido-web p {
+  font-size: var(--fs-1);
+  margin-bottom: 20px;
+  color: var(--font-light);
+}
+
+/* Botón */
+.contenido-web a {
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: var(--fs-1);
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--purple-button);
+  color: var(--font);
+  border-radius: 16px;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+}
+
+.contenido-web a:hover {
+  background: var(--purple-button-hover);
+  transform: scale(1.05);
+}
